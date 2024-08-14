@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="final.css">
+	<script src="https://kit.fontawesome.com/bbec992219.js" crossorigin="anonymous"></script>
+	<!-- FONTS -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+
+	<title>Fort Greene Park</title>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="nav">
+	<input type="checkbox" id="navcheckbox" class="navcheckbox">
+	<label for="navcheckbox" class="navtoggle">
+	<i class="fa-sharp fa-solid fa-2xl fa-bars" id="bar"></i>
+	<i class="fa-sharp fa-solid fa-2xl fa-xmark" id="ex"></i>
+	</label>
+
+<ul class="nav_menu">
+	<li class="logo"><a href="final.html">
+		<img src="images/logo.png">
+	</a></li>
+	<li class="subs"><a href="history.html">History</a></li>
+	<li class="subs"><a href="activity.html">Activities</a></li>
+	<li class="subs"><a href="view.html">Views</a></li>
+</ul> 
+
+
+</nav>
+
+
+ <div class="hero">
+<div class="hero-content"> 
+	<h1 class="herotext">
+	Explore</h1>
+	
+<div class="box">
+		<span></span>
+		<span></span>
+		<span></span>
+	  </div>	
+<div class="box1">
+		<span></span>
+		<span></span>
+		<span></span>
+	  </div>	
+</div>	
+</div>
+
+
+<!-- Quick Section -->
+
+<div class="container">
+<div class="item gallery">
+
+	<div class="card">
+		<img src="images/history1.png" alt="Fort Greene Park Front Monument" class="card-img">
+
+		<div class="card-details">
+			<a href="history.html"><h2>History</h2></a>
+		</div>
+	</div>	
+
+
+	<div class="card">
+		<img src="images/activities1.JPG" alt="People and dogs gathering at Fort Greene Park" class="card-img">
+
+		<div class="card-details">
+		<a href="activity.html"><h2>Activities</h2></a>
+		</div>
+	</div>	
+
+	<div class="card">
+		<img src="images/view1.JPG" alt="Fort Greene Park big tree view" class="card-img">
+
+		<div class="card-details">
+		<a href="view.html"><h2>Views</h2></a>
+		</div>
+	</div>	
+
+</div>
+
+
+<div class="item personalstatement">
+
+
+<p><span style="font-size:40px; font-weight: 500;">A Great Time</span><br>
+Fort Greene Park is a great place for fun activities. I enjoy going to the park on a weekend with my sibilings. The last time I went to the park was with my sibilings to catch the sunrise. We woke up super early that morning, walked up the 100 stairs, set the tripod, and waited for the moment. Unfortunately, it was a very cloudy day. When the clouds cleared, the sun was already in mid air. Our idea to take a time-lapse video failed, but we knew better. As we planned the next attempt in our heads, we didn't miss the chance to take have fun at the moment. We took lots of pictures of people, animals, sky, clouds, and anything we could possibly find. The park is very special to me because I had a memorable adventure time there. When I look back at the pictures I took, I can always remember the great time I had with my siblings. </p>
+
+<img class="memo" src="images/img1.png">
+
+<img class="memo" src="images/img2.png">
+
+<img class="memo" src="images/img3.png">
+
+<img class="memo" src="images/img4.png">
+
+<img class="memo" src="images/img5.png">
+
+<img class="memo" src="images/img6.png">
+
+<button class="button-left" onclick="plusDivs(-1)">&#9665;</button>
+<button class="button-right" onclick="plusDivs(+1)">&#9655;</button>
+
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("memo");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+</script>
+</div>
+
+<div class="item map">
+	
+	<p><span style="font-size:40px; font-weight:500; "> Visit the Park</span><br>Fort Greene Park is in the Fort Greene neighborhood by Dekalb Avenue &, S Portland Ave. If you are visiting Brooklyn or lives in Brooklyn, <a href="https://www.nycgo.com/venues/fort-greene-park/" target="_blank">plan your visit </a>to the Fort Greene Park today!</p>
+
+
+	<iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.openstreetmap.org/export/embed.html?bbox=-73.98053884506227%2C40.689107336659745%2C-73.9704751968384%2C40.69458212081687&amp;layer=mapnik&amp;marker=40.69184885241493%2C-73.97550702095032" style="border: 1px solid black"></iframe><br/><small><a href="https://www.openstreetmap.org/?mlat=40.69185&amp;mlon=-73.97551#map=17/40.69184/-73.97551&amp;layers=N" target="_blank">View Larger Map</a></small>
+
+</div>
+
+<div class="item footer">
+	<div class="col1">
+			<a href="final.html">
+		<img src="images/logo.png" class="foot-logo"></a>
+	</div>
+		 
+</div>
+
+<div class="copy">
+	<div class="tooltip">&#169 Created by Jessica Lian 2023
+  <span class="tooltiptext">With additional support of text from Sources Used and <a href="https://deepai.org/machine-learning-model/text-generator" style="color:white;" target="_blank">Deepai</a></span>
+</div>
+
+
+
+
+
+
+</div>
+
+
+
+</div>
+
+</body>
+</html>

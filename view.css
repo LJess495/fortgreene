@@ -1,0 +1,810 @@
+*{box-sizing: border-box;
+   margin:0;
+   padding:0;}
+
+
+/*FONTS*/
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+
+
+/*THIS IS THE CODE FOR THE RESPONSIVE NAV*/
+
+.nav{
+   border-bottom:1px solid seagreen;
+   width:100%;
+   background-color: white;
+
+  }
+
+
+.nav_menu{
+   font-family:"Quicksand";
+   font-weight:300;
+   font-size:20px;
+   text-transform:uppercase;
+   color:seagreen;
+   display: flex;
+   justify-content: flex-end;
+   flex-direction:column;
+   gap:1rem;
+   align-items:center;
+   height: auto;
+  margin:0 0 .5rem .5rem;
+ 
+ }
+
+
+.navtoggle{
+      position:absolute;
+      cursor:pointer;
+      margin:0rem 2rem;
+      right:0;
+   
+   } 
+.nav i {
+   width:1.5rem;
+   fill:darkseagreen;
+}
+
+#ex {
+   display: none;
+}
+
+#bar{
+   margin-top:2rem;
+
+}
+
+.navcheckbox{
+   display:none;
+   margin-top:1.5rem;
+}
+
+
+li{
+   list-style:none;
+   display:none;
+
+}
+
+.logo{
+   margin-right:auto;
+   display:block;
+   margin-top:.5rem;
+}
+
+.logo img {
+   width:10rem;
+   margin-left:.5rem;
+
+}
+
+.subs a{
+   text-decoration: none;
+   color:inherit;
+   font-size:1.5rem;
+   position:relative;
+}
+
+.subs a:hover{
+   font-weight:600;
+}
+.subs a::after{
+   content:"";
+   position:absolute;
+   display: block;
+   height:0.2em;
+   width:0%;
+   background-color:rgb(128, 70, 27);
+   transition: all ease-in-out 250ms;
+}
+
+.subs a:hover::after{
+   width:95%;
+}
+
+#navcheckbox:checked ~ ul.nav_menu li{
+   display:block;
+}
+
+#navcheckbox:checked ~ label.navtoggle #ex{
+   display:block;
+   margin-top: 2rem;
+}
+
+#navcheckbox:checked ~ label.navtoggle #bar{
+   display:none;
+}
+
+
+/*CONTAINER SECTION*/
+
+.container{
+   font-family: "Quicksand";
+    margin:0 auto;
+   display: grid;
+  height: 100vh;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(5,1fr);
+  grid-gap: 0.3rem;
+    grid-template-areas:
+    "intro-1"
+    "section-1"
+    "section-2"
+    "section-3"
+    "footer";
+
+}
+
+.item{
+/*   border:3px solid orange;*/
+   padding:1rem;
+   padding-top:2rem;}
+
+.intro-1{
+   grid-area: intro-1;
+   font-family: "Quicksand";
+    font-weight: 600;
+    color: #29551a;
+    font-size: 45px;
+    text-align: center;
+    background-color: transparent;
+    width: 100%;
+    text-shadow: 3px 2px 1px #ffffff;
+    padding-top:1rem;
+   
+
+}
+
+.cards,.intro,.intro-at {
+   display:none;
+}
+
+/*SECTION 1/2/3 - FORT GREENE ABOUT*/
+.section-1{
+   grid-area:section-1;
+
+   
+}
+
+
+.item h2{
+   padding-bottom:.5rem;
+}
+
+figure {
+   
+  float: right;
+  text-align: center;
+  font-style: italic;
+  font-size: smaller;
+  text-indent: 0;
+  border: thin silver solid;
+  margin: .5rem;
+  padding: 0.5em;
+}
+.img-1 {
+  width: 100%;
+    margin-bottom: .5rem;
+      margin-top: .5rem;
+
+}
+
+.one,.two,.three,.four{
+   border-left:transparent;
+   border-right:transparent;
+}
+
+.sample1,.sample2{
+   padding-bottom: .5rem;
+}
+
+/*SEC-1 - SLIDESHOW*/
+.mySlides1, .mySlides2 {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,50,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color:white;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+  background-color: rgba(0,50,0,0.5);
+}
+
+.text2{
+   color:white;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 28px;
+  width: 100%;
+  text-align: center;
+  background-color: rgba(0,50,0,0.5);
+}
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+  display: none;
+}
+
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+.slideimg{
+   width:100%;
+}
+
+
+.section-2{
+   grid-area:section-2;
+  
+   
+}
+
+.section-3{
+   grid-area:section-3;
+ 
+   
+
+}
+
+.section-1,.section-2,.section-3{
+   margin-right: 1rem;
+   margin-left: 1rem;
+   position: relative;
+}
+/*BREAK SECTION*/
+.break{
+   position: absolute;
+   border:1px solid #339052;
+   width:20%;
+   top:0%;
+   left:40%;
+ }
+
+.break1{
+   position: absolute;
+   border:2px solid #339052;
+   width:25%;
+   top:0%;
+   left:37%;
+ }
+
+
+/*FOOTER SECTION*/
+.footer{
+   border-top:1px solid green;
+   font-size: 12px;
+   font-family: "Quicksand";
+   grid-area: footer;
+  padding:0;
+  display:flex;
+ position: relative;
+ height:6rem;
+  
+  }
+
+.sources{
+   display: flex;
+   position:absolute;
+   right:1rem;
+   gap:1rem;
+   font-size: 8px;
+   flex-direction: row-reverse;
+
+
+}
+
+.foot-logo{
+   margin-right:auto;
+   display:block;
+   margin-top:.5rem;
+   width:8rem;
+   margin-left:.5rem;
+}
+
+.col2, .col3{
+   margin-top:.5rem;
+   display:flex;
+   flex-direction: column;
+   justify-content:flex-start;
+   align-items:center;
+   margin-bottom:.5rem;
+}
+
+.col2 h3, .col3 h3{
+   text-transform: uppercase;
+   color: #027148;
+}
+
+.col2 a, .col3 a{
+   text-decoration: none;
+   color:forestgreen;
+   font-size:11px;
+}
+
+.col2 a:hover, .col3 a:hover{
+   text-decoration: underline;
+   color:   #013220;
+}
+
+.copy{
+    padding:.2rem;
+   text-align: right;
+   font-size:12px;
+}
+
+
+.sample2 a{
+     text-decoration: none;
+   color:darkseagreen;
+}
+
+.sample2 a:hover{
+   text-decoration: underline;
+   color:#013220;
+ 
+}
+
+.sample1{
+   padding-left: 0rem;
+}
+
+/*TOOLTIP SECTION*/
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 175px;
+  background-color: #93C47D;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 5px;
+  left:0;
+  bottom:0;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+}
+
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+@media(min-width:700px){
+
+.intro-1{
+   display: none;
+}
+.container{
+   grid-template-columns: 1fr;
+  grid-template-rows: repeat(5,1fr);
+  grid-gap: 0.3rem;
+    grid-template-areas:
+    "cards"
+    "section-1"
+    "section-2"
+    "section-3"
+    "footer";
+
+}
+
+   /*INTRO SECTION*/
+
+.intro, .intro-at{
+   display: block;
+    font-family: "Quicksand";
+    font-weight: 600;
+    color: #29551a;
+    font-size: 50px;
+    text-align: center;
+    background-color: transparent;
+    width: 100%;
+    text-shadow: 3px 2px 1px grey;
+    padding-top: 0.5rem;
+}
+
+.intro-at{
+      text-shadow: 1px 0px 0px grey;
+}
+.cards{
+   background-color: transparent;
+   grid-area:cards;  
+   display:flex;
+  flex-direction: row;
+      justify-content: space-evenly;
+    align-items: flex-start;
+    padding-top:1rem;
+}
+
+.card{
+  
+  margin:.5rem;
+  width:20%;
+   display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+}
+.card img {
+   width:150px;
+}
+.card-img{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-bottom:.5rem;
+   border-radius: 10px;
+}
+
+
+.card-details {
+    text-align: center;
+  padding: 10px 20px;
+  font-family:"Quicksand";
+  font-size:11px;
+  font-weight: 100;
+}
+
+.card-img:hover{
+    transform: scale(1.2);
+    transition: ease-in 250ms;
+        box-shadow: 0 4px 5px 0 rgba(75, 46, 13, 0.6), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+}
+
+
+
+}
+
+
+
+
+
+
+
+
+/*when screen gets larger than 600px*/
+@media (min-width:600px)
+
+{
+
+.foot-logo{
+   width: 12rem;
+}
+.sources{
+   right:2rem;
+   gap:2rem;
+   font-size: 11px;
+
+}
+
+ /*NAVBAR SECTION*/
+ .navtoggle{
+   display:none;
+}
+
+.nav_menu{
+   flex-direction: row;
+   align-items: end;
+   height:auto;
+   font-size: 40px;
+   margin-right:1.5rem;
+   gap:2.2rem;
+}
+
+
+li{
+     display:block;
+     margin-block:auto;
+   }
+
+
+/* SECTION 1  */
+.section-1,.section-2,.section-3{
+    margin-right: 4rem;
+    margin-left:4rem;}
+
+/*FOOTER SECTION*/
+.footer{
+   column-gap:8rem;
+}
+
+}
+
+
+/*when screen gets larger than 900px*/
+@media (min-width:900px)
+{
+
+
+/*NAVBAR SECTION*/
+ .navtoggle{
+   display:none;
+}
+
+.nav_menu{
+   flex-direction: row;
+   align-items: end;
+   height:auto;
+   font-size: 40px;
+   margin-right:3rem;
+}
+
+li{
+     display:block;
+     margin-block:auto;
+   }
+
+
+  .logo img{
+   width:16rem;
+   margin-left:.2rem;
+  }
+
+
+/*SECTION 1*/
+   .section-1{
+      align-items: flex-start;
+      display:grid;
+      grid-template-areas: 
+      "title title title"
+      "one two sample1"
+      "three four sample1";
+   
+   }
+.sample1{
+   padding-left: 1rem;
+}
+.set1,.set2{
+   display:flex;
+   flex-direction: row;
+}
+
+
+.img-1{
+   width:65%;
+    margin-bottom: .5rem;
+      margin-top: .5rem;
+}
+   figure{
+   display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+
+
+.one{
+   border-top:transparent;
+   border-left:transparent;
+}
+
+.two{
+   border-top:transparent;
+   border-right:transparent;
+}
+
+.three{
+   border-bottom:transparent;
+   border-left:transparent;
+}
+
+.four{
+   border-bottom:transparent;
+   border-right:transparent;
+}
+
+.imgbox{
+   grid-area:imgbox;
+}
+
+.title{
+   grid-area: title; 
+}
+
+.sample1{
+   grid-area:sample1;
+
+}
+
+.sample2{
+   grid-area:sample2;  
+
+}
+
+.sample3{
+   grid-area:sample3;
+ 
+}
+
+.sample4{
+   grid-area:sample4;  
+
+}
+
+
+.sample1,.sample2,.sample3,{ 
+ padding-right:1rem;
+}
+
+
+
+
+.section-1,.section-2,.section-3{
+    margin-right: 6rem;
+    margin-left:6rem;}
+
+/* SECTION 2   */
+
+.slideshow-container{
+   grid-area: slideshow-container; margin-top: 1rem;
+}
+
+ br{
+   display: none;
+}
+  
+
+
+
+}
+
+@media(min-width:1200px)
+{
+
+
+/*SECTION 1*/
+   .section-1{
+      align-items: flex-start;
+      display:grid;
+      grid-template-areas: 
+      "title title title title"
+      "sample1 sample1  sample1  sample1"
+      "one two three four";
+   
+   }
+.one,.two,.three{
+    border-right: thin silver solid;
+}
+
+
+
+.sample1,.sample2,.sample3,{ 
+ padding-right:1rem;
+}
+
+.set, .set1,.set2{
+   display:flex;
+   flex-direction: row;
+}
+
+
+figure{
+   display: flex;
+    flex-direction: column;
+    justify-content: center;
+   
+   border-top:transparent;
+   border-bottom: transparent;
+  
+    
+}
+
+.img-1{
+   width:80%;
+   margin-bottom: .5rem;
+      margin-top: .5rem;
+}
+
+.section-1,.section-2,.section-3{
+    margin-right: 6rem;
+    margin-left:6rem;}
+
+.slideshow-container{
+   grid-area: slideshow-container; margin-top: 1rem;
+}
+.sample1{
+   padding-left: 0rem;
+}
+  
+
+/* SECTION2   */
+
+.section-2{
+      align-items: flex-start;
+      display:grid;
+      grid-template-areas: 
+      "title title"
+      "sample2 slideshow-container";
+   }
+
+
+.sample2,.sample3{
+   padding-right:1rem;
+}
+
+
+   /*SECTION 3*/
+.section-3{
+      align-items: flex-start;
+      display:grid;
+      grid-template-areas: 
+      "title title"
+      "slideshow-container sample4";
+   }
+    .slideshow-container{
+
+      margin-top: 0rem;}
+.sample4{
+   padding-left: 1rem;
+}
+
+.text2{
+   bottom:10px;
+}
+
+}
